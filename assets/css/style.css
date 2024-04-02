@@ -10,3 +10,19 @@
 .icon i{
     font-size: 25px;
 }
+
+.imgUser{
+    width: 20px;
+    height: 20px;
+}
+
+.arrowButton{
+    width: 30px;
+    height: 30px;
+    background-color: #131313;
+    color: white;
+}
+
+.sizeDrop{
+    height: 300px;
+}
