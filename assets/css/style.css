@@ -1,28 +1,51 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-.icon{
+.icon {
     width: 30px;
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.icon i{
+
+.icon i {
     font-size: 25px;
 }
 
-.imgUser{
-    width: 20px;
-    height: 20px;
+.imgUser {
+    width: 30px;
+    height: 30px;
 }
 
-.arrowButton{
+.arrowButton {
     width: 30px;
     height: 30px;
     background-color: #131313;
     color: white;
 }
 
-.sizeDrop{
+.sizeDrop {
     height: 300px;
+}
+
+.bgUserProfile {
+    background-color: #0A0A0A;
+}
+
+.bgUserProfile li a {
+    color: white;
+}
+
+.iconInButton {
+    width: 30px;
+    height: 30px;
+}
+
+.iconInButton ion-icon {
+    font-size: 20px;
+}
+
+.imgFriend {
+    width: 40px;
+    height: 40px;
 }

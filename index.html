@@ -75,23 +75,27 @@
                 <main class="px-2">
                     <section class="d-flex justify-content-between align-items-center">
                         <div class="d-flex gap-2">
-                            <button class="arrowButton rounded-circle border-0 d-flex justify-content-center align-items-center">
+                            <button
+                                class="arrowButton rounded-circle border-0 d-flex justify-content-center align-items-center">
                                 <ion-icon name="chevron-back-outline" class=""></ion-icon>
                             </button>
-                            <button class="arrowButton rounded-circle border-0 d-flex justify-content-center align-items-center">
+                            <button
+                                class="arrowButton rounded-circle border-0 d-flex justify-content-center align-items-center">
                                 <ion-icon name="chevron-forward-outline" class=""></ion-icon>
                             </button>
                         </div>
-                        <div class="rounded-pill sizeDrop dropdown bg-black d-flex text-white d-flex justify-content-center align-items-center h-auto gap-3">
-                            <figure class="imgUser m-0 d-flex justify-content-center align-items-center h-100">
+                        <div class="rounded-pill sizeDrop dropdown bgUserProfile d-flex text-white d-flex justify-content-center align-items-center h-auto gap-3">
+                            <figure class="imgUser m-0 d-flex justify-content-center align-items-center h-100 p-1">
                                 <img src="https://picsum.photos/200" alt="Image usar" class="w-100 rounded-circle">
                             </figure>
-                            <button class="px-0 py-2 btn text-white d-flex justify-content-center align-items-center gap-2 border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button
+                                class="p-0 btn text-white d-flex justify-content-center align-items-center gap-2 border-0"
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Lorem, ipsum dolor.
                                 <ion-icon name="caret-down-outline"></ion-icon>
                                 <ion-icon name="caret-up-outline" class="d-none"></ion-icon>
                             </button>
-                            <ul class="dropdown-menu .bg-body-tertiary">
+                            <ul class="dropdown-menu bgUserProfile">
                                 <li><a class="dropdown-item" href="#">Account</a></li>
                                 <li><a class="dropdown-item" href="#">Profilo</a></li>
                                 <li><a class="dropdown-item" href="#">Sessione privata</a></li>
@@ -104,7 +108,77 @@
                     <section></section>
                 </main>
             </div>
-            <div class="col-2 bg-black">Column</div>
+            <div class="col-2 bg-black">
+                <!--                 <div>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div> -->
+                <div class="d-flex flex-column gap-5 ps-2">
+                    <section class="d-flex justify-content-between align-content-center w-100">
+                        <h5 class="fw-bold">Attività amici</h5>
+
+                        <div class="d-flex justify-content-center align-content-center">
+                            <button class="btn text-white iconInButton p-0">
+                                <ion-icon name="person-add-outline"></ion-icon>
+                            </button>
+                            <button class="btn text-white iconInButton p-0">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </section>
+                    <section class="d-flex flex-column gap-4">
+                        <div class="d-flex gap-3">
+                            <figure class="m-0 mt-2 imgFriend">
+                                <img src="https://picsum.photos/200" alt="" class="w-100 rounded-circle">
+                            </figure>
+                            <div class="w-100">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h6 class="m-0">Lorem, ipsum.</h6>
+                                    <p class="m-0">4 ore</p>
+                                </div>
+                                <p class="m-0">Lorem ipsum dolor sit.</p>
+                                <div class="d-flex align-items-center gap-1">
+                                    <ion-icon name="disc-outline"></ion-icon>
+                                    <p class="m-0">Lorem, ipsum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <figure class="m-0 mt-2 imgFriend">
+                                <img src="https://picsum.photos/200" alt="" class="w-100 rounded-circle">
+                            </figure>
+                            <div class="w-100">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h6 class="m-0">Lorem, ipsum.</h6>
+                                    <p class="m-0">4 ore</p>
+                                </div>
+                                <p class="m-0">Lorem ipsum dolor sit.</p>
+                                <div class="d-flex align-items-center gap-1">
+                                    <ion-icon name="disc-outline"></ion-icon>
+                                    <p class="m-0">Lorem, ipsum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <figure class="m-0 mt-2 imgFriend">
+                                <img src="https://picsum.photos/200" alt="" class="w-100 rounded-circle">
+                            </figure>
+                            <div class="w-100">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h6 class="m-0">Lorem, ipsum.</h6>
+                                    <p class="m-0">4 ore</p>
+                                </div>
+                                <p class="m-0">Lorem ipsum dolor sit.</p>
+                                <div class="d-flex align-items-center gap-1">
+                                    <ion-icon name="disc-outline"></ion-icon>
+                                    <p class="m-0">Lorem, ipsum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
         </div>
     </div>
 
