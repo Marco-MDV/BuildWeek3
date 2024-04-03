@@ -1,5 +1,5 @@
 const searchParams = new URLSearchParams(window.location.search)
-const id = "75621062";
+const id = "246791";
 const URL_ENDPOINT = 'https://striveschool-api.herokuapp.com/api/deezer/artist/' + id
 
 const getArtist = async () => {
@@ -18,6 +18,44 @@ const getArtist = async () => {
 getArtist().then(res => createArtistSection(res))
 
 const createArtistSection = (artist) => {
-    const artistName = document.querySelector("#artist-name")
-    artistName.textContent = artist.name
+    const artistBanner = document.querySelector("#artist-banner")
+    artistBanner.innerHTML = /*html*/ `
+    <div class="artist-image position-relative">
+        <div class="overlay-artist-bg"></div>
+        <img class="w-100 h-100 object-fit-cover" id="artist-image" src="${artist.picture_xl}" alt="">
+    </div>
+    <div class="px-3 position-absolute bottom-0">
+        <div class="d-flex gap-2">
+            <i class="bi bi-patch-check-fill"></i>
+            <p>Artista verificato</p>
+        </div>
+        <h3 class="fw-bold fs-1" id="artist-name">${artist.name}</h3>
+        <p>3.456.789 ascoltatori mensili</p>
+    </div>`
+
+    const tracklistLike = document.querySelector("#tracklist-like")
+    tracklistLike.innerHTML = /*html*/ `
+    <div class="avatar-artist rounded-circle">
+        <img class="w-100 h-100 object-fit-cover" id="artist-image" src="${artist.picture_xl}" alt="">
+    </div>
+    <div class="d-flex flex-column">
+        <p>Hai messo Mi piace a 11 brani</p>
+        <p>Di ${artist.name}</p>
+    </div>`
+
+    getPopularSong(artist.tracklist)
+}
+
+const getPopularSong = async (urlPopularSong) => {
+    const URL_POPULAR_SONG = urlPopularSong
+    try {
+        const response = await fetch(URL_POPULAR_SONG)
+        const data = await response.json()
+        if (response.ok) {
+            console.log(data);
+            return data            
+        }        
+    } catch (error) {
+        console.log(error);
+    }
 }
