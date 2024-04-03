@@ -1,6 +1,6 @@
-const requestData = async () =>{
+const requestData = async (value) =>{
     try {
-        const response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=' + randomName(arrayNameArtists));   
+        const response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=' + value);   
         const JsonResponse = response.json()
         if (response.ok) {
             return JsonResponse

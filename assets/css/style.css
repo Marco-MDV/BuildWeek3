@@ -45,7 +45,43 @@
     font-size: 20px;
 }
 
+.principalSong{
+    background: rgb(0,0,0);
+    background: linear-gradient(4deg, rgba(0,0,0,1) 0%, rgba(116,111,111,1) 100%);
+}
+
 .imgFriend {
     width: 40px;
     height: 40px;
+}
+
+.buttonHidden{
+    background-color: #222222;
+    color: #636363;
+    font-weight: bold;
+}
+
+.principalSongFigure{
+    height: 85%;
+    width: auto !important;
+}
+
+.principalSongFigure img{
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+.info{
+    color: #9B9B9B;
+    font-size: 25px;
+}
+
+.play{
+    background-color: #1ED760;
+    font-weight: bold;
+}
+
+.salva{
+    font-weight: bold;
 }
