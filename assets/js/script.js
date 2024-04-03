@@ -46,17 +46,18 @@ const principalSong = (data) =>{
 
     const img = document.createElement('img')
     img.src = song.album.cover
-    img.classList.add('principalSongImg')
+    img.classList.add('principalSongImg','py-3')
     figure.append(img)
 
     /* info centrali */
     const container = document.createElement('div')
-    container.classList.add('containerAlbumInfo')
+    container.classList.add('containerAlbumInfo','h-100','d-flex','flex-column','justify-content-between')
 
     const album = document.createElement('p')
     album.textContent = 'ALBUM'
 
     const title = document.createElement('h1')
+    title.classList.add('fw-bold','title')
     title.textContent = song.album.title
 
     const artist = document.createElement('p')
@@ -111,23 +112,24 @@ const creatplaylist = (data) =>{
         containerPlaylist.classList.add('containerPlaylist','d-flex','justify-content-between','align-items-center','mb-4','rounded','w-100')
 
         const containerSectionOne = document.createElement('div')
-        containerSectionOne.classList.add('containerSectionOne','d-flex','justify-content-center','align-items-center','gap-2')
+        containerSectionOne.classList.add('containerSectionOne','d-flex','justify-content-center','align-items-center','gap-2','text-truncate')
 
         const figurePlaylist = document.createElement('figure')
         figurePlaylist.classList.add('m-0','figurePlaylist')
         const imgPlaylist = document.createElement('img')
         imgPlaylist.classList.add('rounded-start','w-100','h-100')
-        imgPlaylist.src = song.album.cover
+        imgPlaylist.src = song.album.cover_medium
         figurePlaylist.appendChild(imgPlaylist)
 
         const titlePlaylist = document.createElement('p')
+        titlePlaylist.classList.add('m-0','text-truncate')
         titlePlaylist.textContent = song.album.title
 
         const containerSectionTwo = document.createElement('div')
-        containerSectionTwo.classList.add('containerSectionTwo','d-flex','justify-content-center','align-items-center')
+        containerSectionTwo.classList.add('containerSectionTwo','d-flex','justify-content-center','align-items-center','me-3')
         
         const playButton = document.createElement('button')
-        playButton.classList.add('rounded-pill', 'border-0','play2','d-flex','justify-content-center','align-items-center','p-1')
+        playButton.classList.add('rounded-pill', 'border-0','play2','d-flex','justify-content-center','align-items-center','p-1','playButtonPlayList')
         playButton.innerHTML=`<ion-icon name="play-sharp"></ion-icon>`
 
         rowPlaylist.append(colPlayList)
