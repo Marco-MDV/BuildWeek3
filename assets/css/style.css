@@ -45,6 +45,10 @@
     font-size: 20px;
 }
 
+.bgSongSection{
+    background-color: #212121;
+}
+
 .principalSong{
     background: rgb(0,0,0);
     background: linear-gradient(4deg, rgba(0,0,0,1) 0%, rgba(116,111,111,1) 100%);
