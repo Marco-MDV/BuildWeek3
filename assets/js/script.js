@@ -21,13 +21,15 @@ arrayNameArtists =[
     "Ariana Grande",
 ]
 
+/* devo chiedere perché mi da errore su leght anche se funziona */
 const randomName = (array) =>{
     return array[(Math.floor(Math.random() * array.length))]
 } 
 
-requestData(randomName(arrayNameArtists)).then(res =>
-    principalSong(res.data)
-)
+requestData(randomName(arrayNameArtists)).then(res =>{
+    principalSong(res.data),
+    creatplaylist(res.data)
+})
 
 const principalSong = (data) =>{
     const principalSong = document.querySelector('.principalSong')
@@ -92,3 +94,47 @@ const principalSong = (data) =>{
     containerAlbum.append(figure,container)
     principalSong.append(containerAlbum,containerButtonHidden)
 }
+
+const numPlaylist = 6
+
+const creatplaylist = (data) =>{
+    const rowPlaylist = document.querySelector('.rowPlaylist')
+    for (let index = 0; index < numPlaylist; index++) {
+        const colPlayList = document.createElement('div')
+        colPlayList.classList.add('colPlayList','col-4')
+
+        let song = randomName(data)
+        console.log(song);
+        
+        const containerPlaylist = document.createElement('div')
+        containerPlaylist.classList.add('containerPlaylist','d-flex','justify-content-between','align-items-center','mb-4','rounded')
+
+        const containerSectionOne = document.createElement('div')
+        containerSectionOne.classList.add('containerSectionOne','d-flex','justify-content-center','align-items-center','gap-2')
+
+        const figurePlaylist = document.createElement('figure')
+        figurePlaylist.classList.add('m-0','figurePlaylist')
+        const imgPlaylist = document.createElement('img')
+        imgPlaylist.classList.add('rounded-start','w-100','h-100')
+        imgPlaylist.src = song.album.cover
+        figurePlaylist.appendChild(imgPlaylist)
+
+        const titlePlaylist = document.createElement('p')
+        titlePlaylist.textContent = song.album.title
+
+        const containerSectionTwo = document.createElement('div')
+        containerSectionTwo.classList.add('containerSectionTwo','d-flex','justify-content-center','align-items-center')
+        
+        const playButton = document.createElement('button')
+        playButton.classList.add('rounded-pill', 'border-0','play2','d-flex','justify-content-center','align-items-center','p-1')
+        playButton.innerHTML=`<ion-icon name="play-sharp"></ion-icon>`
+
+        rowPlaylist.append(colPlayList)
+        colPlayList.append(containerPlaylist)
+        containerPlaylist.append(containerSectionOne, containerSectionTwo)
+        containerSectionOne.append(figurePlaylist, titlePlaylist)
+        containerSectionTwo.append(playButton)
+        
+    }
+}
+creatplaylist()
