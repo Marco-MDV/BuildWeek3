@@ -1,11 +1,13 @@
-
 const requestData = async () =>{
     try {
-        const response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=queen');   
+        const response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=' + randomName(arrayNameArtists));   
         const JsonResponse = response.json()
-        return JsonResponse
+        if (response.ok) {
+            return JsonResponse
+        }
     } catch (error) {
         console.log(error.message);
     }
 }
-requestData().then(result => console.log(result))
+
+
