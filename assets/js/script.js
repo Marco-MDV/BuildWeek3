@@ -99,15 +99,16 @@ const numPlaylist = 6
 
 const creatplaylist = (data) =>{
     const rowPlaylist = document.querySelector('.rowPlaylist')
+    rowPlaylist.classList.add('rowPlaylist','d-flex','justify-content-center','align-items-stretch')
     for (let index = 0; index < numPlaylist; index++) {
         const colPlayList = document.createElement('div')
-        colPlayList.classList.add('colPlayList','col-4')
+        colPlayList.classList.add('colPlayList','col-4','d-flex','justify-content-center','align-items-center')
 
         let song = randomName(data)
         console.log(song);
         
         const containerPlaylist = document.createElement('div')
-        containerPlaylist.classList.add('containerPlaylist','d-flex','justify-content-between','align-items-center','mb-4','rounded')
+        containerPlaylist.classList.add('containerPlaylist','d-flex','justify-content-between','align-items-center','mb-4','rounded','w-100')
 
         const containerSectionOne = document.createElement('div')
         containerSectionOne.classList.add('containerSectionOne','d-flex','justify-content-center','align-items-center','gap-2')
