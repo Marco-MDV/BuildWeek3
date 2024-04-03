@@ -124,7 +124,6 @@ h1{
     font-size: 20px;
 }
 
-<<<<<<< Updated upstream
 .containerPlaylist:hover {
     && .playButtonPlayList{
         animation: playButton 0.6s forwards;
@@ -143,7 +142,8 @@ h1{
     to{
         opacity: 1;
     }
-=======
+}
+
 /* PAGINA ARTISTA */
 .overlay-artist-bg{
     width: 100%;
@@ -168,6 +168,5 @@ h1{
     width: 75px;
     height: 75px;
     background-color: red;
->>>>>>> Stashed changes
 }
 
