@@ -135,6 +135,7 @@ h1{
     }
 }
 
+<<<<<<< Updated upstream
 .visualizzaTutto{
     border: 0px;
     color: #A7A7A7;
@@ -174,6 +175,8 @@ h1{
     object-fit: cover;
 }
 
+=======
+>>>>>>> Stashed changes
 /* PAGINA ARTISTA */
 .overlay-artist-bg{
     width: 100%;
@@ -201,4 +204,13 @@ h1{
 }
 
 
+<<<<<<< Updated upstream
 
+=======
+.visualizzaTutto{
+    border: 0px;
+    color: #A7A7A7;
+    background-color: transparent;
+    font-weight: bold;
+}
+>>>>>>> Stashed changes
