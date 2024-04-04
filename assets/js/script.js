@@ -207,6 +207,12 @@ const removeHidden = (row, hiddeCards) =>{
     })
 }
 
-const footer = () =>{
+const footer = (data) =>{
+    let song = randomName(data)
+    
+    const songSection = document.querySelector('.songSection')
+
+    const containreInfo = document.createElement('figure')
+    const imgSong = document.createElement('img')
     
 }
