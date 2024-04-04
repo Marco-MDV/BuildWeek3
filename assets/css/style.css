@@ -2,6 +2,7 @@
 
 root{
     --green: #1ED760;
+    --grey: #1C1C1C;
 }
 
 
@@ -54,14 +55,6 @@ root{
     background-color: #212121;
 }
 
-.principalSong{
-    background: rgb(0,0,0);
-    background: linear-gradient(10deg, rgba(0,0,0,1) 36%, rgba(116,111,111,1) 100%);
-}
-
-/* 
- background-image: linear-gradient(rgba(0, 0, 0, .6) 0, rgba(0,0,0,1) 100%);
-*/
 
 h1{
     font-size: 50px;
@@ -77,6 +70,8 @@ h1{
     color: #636363;
     font-weight: bold;
 }
+
+/* chidere perché non si l'img non si adata al figure */
 
 .principalSongFigure{
     height: 256px;
@@ -113,11 +108,7 @@ h1{
     max-height: 80px;
     object-fit: cover;
 }
-/* .figurePlaylist img{
-    height: 100% !important;
-    width: 100% !important;
-}
- */
+
 .play2{
     background-color: #1ED760;
     font-weight: bold;
@@ -144,7 +135,45 @@ h1{
     }
 }
 
-<<<<<<< Updated upstream
+.visualizzaTutto{
+    border: 0px;
+    color: #A7A7A7;
+    background-color: transparent;
+    font-weight: bold;
+}
+.buttonHidden{
+    font-size: 12px;
+}
+
+
+.bgHero{
+    background: rgb(0,0,0);
+    background: linear-gradient(10deg, rgba(0,0,0,1) 36%, rgba(116,111,111,1) 100%);
+}
+
+.card{
+    background-color: #171717;
+    width: 200px;
+
+}
+.card:hover{
+    && .playButtonPlayList{
+        animation: playButton 0.6s forwards;
+    }
+    background-color: #191919;
+}
+
+.figureCard{
+    height: 198px;
+    width: 100%;
+}
+
+.figureCard img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 /* PAGINA ARTISTA */
 .overlay-artist-bg{
     width: 100%;
@@ -171,12 +200,5 @@ h1{
     background-color: red;
 }
 
-=======
 
-.visualizzaTutto{
-    border: 0px;
-    color: #A7A7A7;
-    background-color: transparent;
-    font-weight: bold;
-}
->>>>>>> Stashed changes
+

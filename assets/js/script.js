@@ -28,7 +28,8 @@ const randomName = (array) =>{
 
 requestData(randomName(arrayNameArtists)).then(res =>{
     principalSong(res.data),
-    creatplaylist(res.data)
+    creatplaylist(res.data),
+    cardSong(res.data)
 })
 
 const principalSong = (data) =>{
@@ -38,14 +39,14 @@ const principalSong = (data) =>{
     console.log(song);
 
     const containerAlbum = document.createElement('div')
-    containerAlbum.classList.add('containerAlbum', 'd-flex', 'justify-content-start', 'align-items-center','gap-4','w-75') 
+    containerAlbum.classList.add('containerAlbum', 'd-flex', 'justify-content-start', 'align-items-center','gap-4','w-100') 
 
     /* img album */
     const figure = document.createElement('figure')
     figure.classList.add('m-0','principalSongFigure')
 
     const img = document.createElement('img')
-    img.src = song.album.cover
+    img.src = song.album.cover_xl    
     img.classList.add('principalSongImg','py-3')
     figure.append(img)
 
@@ -86,19 +87,22 @@ const principalSong = (data) =>{
 
     /* bottone per nascondere */
     const containerButtonHidden = document.createElement('div')
-    containerButtonHidden.classList.add('w-25','d-flex', 'justify-content-end', 'align-items-start', )
-    const buttonHidden = document.createElement('button')
+    containerButtonHidden.classList.add('w-100','d-flex', 'justify-content-end', 'align-items-start', 'containerButtonHidden')
+    const buttonHidden = document.createElement('button','buttonHidden')
     buttonHidden.textContent='NASCONDI ANNUNCI'
     buttonHidden.classList.add('buttonHidden','rounded-pill','border-0','px-3','py-1')
+    const hiddenButton = document.querySelector('.hiddenButton')
+
 
     containerButtonHidden.appendChild(buttonHidden)
     containerAlbum.append(figure,container)
-    principalSong.append(containerAlbum,containerButtonHidden)
+    principalSong.append(containerAlbum)
+    hiddenButton.append(containerButtonHidden)
 }
 
-const numPlaylist = 6
 
 const creatplaylist = (data) =>{
+    const numPlaylist = 6
     const rowPlaylist = document.querySelector('.rowPlaylist')
     rowPlaylist.classList.add('rowPlaylist','d-flex','justify-content-center','align-items-stretch')
     for (let index = 0; index < numPlaylist; index++) {
@@ -140,5 +144,68 @@ const creatplaylist = (data) =>{
         
     }
 }
-creatplaylist()
 
+
+
+
+const cardSong = (data) =>{
+    const numCard = 10 
+    for (let index = 0; index < numCard; index++) {
+        let song = randomName(data)
+        createCard(song); 
+    }
+    row()
+}
+
+
+const createCard = (song) =>{
+    const containerCard = document.querySelector('.containerCard')
+    const card = document.createElement('div')
+    card.classList.add('card','d-flex','justify-content-start','align-items-start','gap-2','rounded','p-2','text-white')
+    containerCard.appendChild(card)
+
+    const figure = document.createElement('figure')
+    figure.classList.add('m-0','figureCard','position-relative')
+    const img = document.createElement('img')
+    img.classList.add('rounded','w-100','h-100')
+    img.src = song.album.cover_medium
+    const playButton = document.createElement('button')
+    playButton.classList.add('rounded-pill', 'border-0','play2','d-flex','justify-content-center','align-items-center','p-1','playButtonPlayList','position-absolute','bottom-0', 'end-0','me-1','mb-1')
+    playButton.innerHTML=`<ion-icon name="play-sharp"></ion-icon>`
+
+
+    figure.append(img,playButton)
+
+    const title = document.createElement('h6')
+    title.classList.add('title','fw-bold')
+    title.textContent  = 'Playlist title'
+
+    const description = document.createElement('p')
+    description.classList.add('description','truncate')
+    description.textContent = 'Lorem, ipsum dolor.'
+
+    card.append(figure,title,description)
+}
+
+const hiddenCards = (hiddeCards) =>{  
+    hiddeCards.forEach(card =>{
+        card.classList.add('d-none')
+    })
+}
+
+const row = () =>{
+    const rows = document.querySelectorAll('.rowCard')
+    rows.forEach(row =>{
+        const hiddeCards = Array.from(row.querySelectorAll('.card')).slice(5)
+        hiddenCards(hiddeCards)
+        removeHidden(row, hiddeCards)
+    }) 
+}
+
+const removeHidden = (row, hiddeCards) =>{
+    row.querySelector('.visualizzaTutto').addEventListener('click', () => {
+        hiddeCards.forEach(card =>{
+            card.classList.remove('d-none')
+        })
+    })
+}
