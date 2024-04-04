@@ -29,7 +29,8 @@ const randomName = (array) =>{
 requestData(randomName(arrayNameArtists)).then(res =>{
     principalSong(res.data),
     creatplaylist(res.data),
-    cardSong(res.data)
+    cardSong(res.data),
+    footer(res.data)
 })
 
 const principalSong = (data) =>{
@@ -100,7 +101,6 @@ const principalSong = (data) =>{
     hiddenButton.append(containerButtonHidden)
 }
 
-
 const creatplaylist = (data) =>{
     const numPlaylist = 6
     const rowPlaylist = document.querySelector('.rowPlaylist')
@@ -144,9 +144,6 @@ const creatplaylist = (data) =>{
         
     }
 }
-
-
-
 
 const cardSong = (data) =>{
     const numCard = 10 
@@ -208,4 +205,8 @@ const removeHidden = (row, hiddeCards) =>{
             card.classList.remove('d-none')
         })
     })
+}
+
+const footer = () =>{
+    
 }
