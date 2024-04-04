@@ -241,14 +241,14 @@ const play = () =>{
     const playbar = document.querySelector('.playbar')
 
     const top = document.createElement('div')
-    top.classList.add('d-flex','justify-content-center','align-items-center','gap-2')
+    top.classList.add('d-flex','justify-content-center','align-items-center','gap-2','top')
 
     const randomPlay = document.createElement('button')
     randomPlay.innerHTML=`<ion-icon name="shuffle-outline"></ion-icon>`
     const back = document.createElement('button')
     back.innerHTML=`<ion-icon name="play-skip-back"></ion-icon>`
     const pause = document.createElement('button')
-    pause.innerHTML=`<ion-icon name="play"></ion-icon>`
+    pause.innerHTML=`<ion-icon name="play-circle"></ion-icon>`
     const forward = document.createElement('button')
     forward.innerHTML=`<ion-icon name="play-skip-forward"></ion-icon>`
     const rewind = document.createElement('button')
@@ -262,12 +262,21 @@ const play = () =>{
     const startTime = document.createElement('p')
     startTime.textContent = '0:58'
 
+    const progress = document.createElement('div')
+    progress.classList.add('progress','playProgressBar','mb-3')
+    progress.innerHTML=`<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>`
+
     const endTime = document.createElement('p')
     endTime.textContent = '3:20'
 
-    down.append(startTime,endTime)
+    down.append(startTime,progress,endTime)
 
     playbar.append(top,down)
+
+    const buttons = top.querySelectorAll('button')
+    buttons.forEach(button =>{
+        button.classList.add('info', 'border-0', 'bg-transparent', 'rounded-pill')
+    })
 }
 
 const set = () =>{

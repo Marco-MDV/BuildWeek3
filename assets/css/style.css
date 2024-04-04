@@ -22,6 +22,31 @@ body{
     font-size: 25px;
 }
 
+.iconHeart{
+    width: 30px;
+    height: 30px;
+    background: rgb(63,33,168);
+    background: linear-gradient(170deg, rgba(63,33,168,1) 35%, rgba(128,151,153,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconHeart ion-icon{
+    width: 20px !important;
+    height: 20px !important;
+}
+
+
+.iconBookmark{
+    width: 30px;
+    height: 30px;
+    background-color: #004537;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .imgUser {
     width: 30px;
     height: 30px;
@@ -73,6 +98,10 @@ h1{
     background-color: #222222;
     color: #636363;
     font-weight: bold;
+}
+
+.containerCard {
+    margin-bottom: 142px;
 }
 
 /* chidere perché non si l'img non si adata al figure */
@@ -189,6 +218,26 @@ h1{
 
 .progress div{
 background-color: white !important;
+}
+
+.playbar .top button:first-child{
+    color:#1ED760;
+} 
+
+.playbar .top button:last-child{
+    color:#1ED760;
+} 
+.playbar .top button:nth-child(3){
+    color:white;
+    font-size: 35px;
+} 
+
+.playProgressBar{
+    width: 75%;
+}
+
+.songSection div ion-icon:hover{
+    color: red;
 }
 
 /* PAGINA ARTISTA */
