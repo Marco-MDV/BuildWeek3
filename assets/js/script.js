@@ -63,11 +63,19 @@ const principalSong = (data) =>{
     album.textContent = 'ALBUM'
 
     const title = document.createElement('h1')
+    const linkTitle = document.createElement('a')
+    linkTitle.classList.add('link-unstyled','text-decoration-none','text-white')
+    title.append(linkTitle)
     title.classList.add('fw-bold','title')
-    title.textContent = song.album.title
+    linkTitle.textContent = song.album.title
+    linkTitle.href= './album.html'
 
     const artist = document.createElement('p')
-    artist.textContent = song.artist.name
+    const artistLink = document.createElement('a')
+    artistLink.classList.add('link-unstyled','text-decoration-none','text-white')
+    artistLink.href='./artist.html'
+    artistLink.textContent = song.artist.name
+    artist.append(artistLink)
 
     const moreInfo = document.createElement('p')
     moreInfo.textContent = 'Ascolta il nuovo pezzo di ' + song.artist.name
@@ -131,8 +139,13 @@ const creatplaylist = (data) =>{
         figurePlaylist.appendChild(imgPlaylist)
 
         const titlePlaylist = document.createElement('p')
+        const artistLink = document.createElement('a')
+        titlePlaylist.append(artistLink)
+        artistLink.classList.add('link-unstyled','text-decoration-none','text-white')
+        artistLink.href='./album.html'
+
         titlePlaylist.classList.add('m-0','text-truncate')
-        titlePlaylist.textContent = song.album.title
+        artistLink.textContent = song.album.title
 
         const containerSectionTwo = document.createElement('div')
         containerSectionTwo.classList.add('containerSectionTwo','d-flex','justify-content-center','align-items-center','me-3')
@@ -145,8 +158,7 @@ const creatplaylist = (data) =>{
         colPlayList.append(containerPlaylist)
         containerPlaylist.append(containerSectionOne, containerSectionTwo)
         containerSectionOne.append(figurePlaylist, titlePlaylist)
-        containerSectionTwo.append(playButton)
-        
+        containerSectionTwo.append(playButton)        
     }
 }
 
@@ -175,12 +187,15 @@ const createCard = (song) =>{
     playButton.classList.add('rounded-pill', 'border-0','play2','d-flex','justify-content-center','align-items-center','p-1','playButtonPlayList','position-absolute','bottom-0', 'end-0','me-1','mb-1')
     playButton.innerHTML=`<ion-icon name="play-sharp"></ion-icon>`
 
-
     figure.append(img,playButton)
 
     const title = document.createElement('h6')
+    const artistLink = document.createElement('a')
     title.classList.add('title','fw-bold')
-    title.textContent  = 'Playlist title'
+    artistLink.textContent  = 'Playlist title'
+    artistLink.classList.add('link-unstyled','text-decoration-none','text-white')
+    artistLink.href='./artist.html'
+    title.append(artistLink)
 
     const description = document.createElement('p')
     description.classList.add('description','truncate')
