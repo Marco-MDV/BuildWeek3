@@ -15,6 +15,20 @@ const getArtist = async () => {
     }
 }
 
+const getPopularSong = async (urlPopularSong) => {
+    const URL_POPULAR_SONG = urlPopularSong
+    try {
+        const response = await fetch(URL_POPULAR_SONG)
+        const data = await response.json()
+        if (response.ok) {
+            console.log(data);
+            return data            
+        }        
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 getArtist().then(res => createArtistSection(res))
 
 const createArtistSection = (artist) => {
@@ -38,7 +52,7 @@ const createArtistSection = (artist) => {
     <div class="avatar-artist rounded-circle">
         <img class="w-100 h-100 object-fit-cover" id="artist-image" src="${artist.picture_xl}" alt="">
     </div>
-    <div class="d-flex flex-column">
+    <div class="d-flex flex-column px-2 ">
         <p>Hai messo Mi piace a 11 brani</p>
         <p>Di ${artist.name}</p>
     </div>`
@@ -46,16 +60,11 @@ const createArtistSection = (artist) => {
     getPopularSong(artist.tracklist)
 }
 
-const getPopularSong = async (urlPopularSong) => {
-    const URL_POPULAR_SONG = urlPopularSong
-    try {
-        const response = await fetch(URL_POPULAR_SONG)
-        const data = await response.json()
-        if (response.ok) {
-            console.log(data);
-            return data            
-        }        
-    } catch (error) {
-        console.log(error);
-    }
+const createPopularSong = (songs) => {
+    const songsTab = document.querySelector("#tab-popular-songs")
+
+    songsTab.innerHTML = /*html*/`
+    <th scope="row">1</th>
+    <td>${songs.title}</td>`
 }
+

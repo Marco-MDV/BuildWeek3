@@ -202,3 +202,9 @@ h1{
 
 
 
+.visualizzaTutto{
+    border: 0px;
+    color: #A7A7A7;
+    background-color: transparent;
+    font-weight: bold;
+}
