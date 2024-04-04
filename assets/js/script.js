@@ -33,7 +33,8 @@ requestData(randomName(arrayNameArtists)).then(res =>{
     footer(res.data),
     play(),
     set(),
-    hideAside()
+    hideAside(),
+    hiddeAd()
 })
 
 const principalSong = (data) =>{
@@ -92,7 +93,8 @@ const principalSong = (data) =>{
     /* bottone per nascondere */
     const containerButtonHidden = document.createElement('div')
     containerButtonHidden.classList.add('w-100','d-flex', 'justify-content-end', 'align-items-start', 'containerButtonHidden')
-    const buttonHidden = document.createElement('button','buttonHidden')
+    const buttonHidden = document.createElement('button')
+    buttonHidden.setAttribute('id','buttonHidden')
     buttonHidden.textContent='NASCONDI ANNUNCI'
     buttonHidden.classList.add('buttonHidden','rounded-pill','border-0','px-3','py-1')
     const hiddenButton = document.querySelector('.hiddenButton')
@@ -321,5 +323,11 @@ const hideAside = () =>{
         document.querySelector('aside').classList.add('d-none'),
     document.querySelector('#principal').classList.remove('col-8'),
     document.querySelector('#principal').classList.add('col-10')
+    })
+}
+
+const hiddeAd = () =>{
+    document.querySelector('#buttonHidden').addEventListener('click', () =>{
+        document.querySelector('.hero').remove(document.querySelector('.hero'))
     })
 }
