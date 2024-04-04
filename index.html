@@ -13,260 +13,264 @@
 
 <body class="text-light">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-2 bg-black">
-                <aside class=" d-flex gap-3 flex-column p-3">
-                    <div class="d-flex flex-column gap-2 pb-3 border-bottom">
-                        <div class="d-flex flex-column gap-2">
-                            <div class="d-flex gap-3">
-                                <div class="icon"><i class="bi bi-three-dots"></i></div>
-                            </div>
-                            <div class="d-flex gap-3">
-                                <div class="icon"><i class="bi bi-house-door-fill"></i></div> Home
-                            </div>
-                            <div class="d-flex gap-3">
-                                <div class="icon"><i class="bi bi-search"></i></div> Cerca
-                            </div>
-                            <div class="d-flex gap-3">
-                                <div class="icon"><i class="bi bi-collection"></i></div> La tua libreria
-                            </div>
-                        </div>
-
-                        <div class="d-flex flex-column gap-2">
-                            <div class="d-flex gap-3">
-                                <div class="icon"><i class="bi bi-plus-square-fill"></i></div> Crea playlist
-                            </div>
-                            <div class="d-flex gap-3">
-                                <div class="icon"><i class="bi bi-heart-fill"></i></div> Brani che ti piacciono
-                            </div>
-                            <div class="d-flex gap-3">
-                                <div class="icon"><i class="bi bi-bookmark-fill"></i></div> I tuoi episodi
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <ul class="list-group gap-2 list-unstyled">
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                            <li class="">Lorem, ipsum dolor.</li>
-                        </ul>
-                    </div>
-                </aside>
-            </div>
-            <div class="col-8 bgSongSection">
-                <div class="row">
-                    <!-- top -->
-                    <div class="col-12">
-                        <section class="d-flex justify-content-between align-items-center py-3">
-                            <div class="d-flex gap-2">
-                                <button
-                                    class="arrowButton rounded-circle border-0 d-flex justify-content-center align-items-center">
-                                    <ion-icon name="chevron-back-outline" class=""></ion-icon>
-                                </button>
-                                <button
-                                    class="arrowButton rounded-circle border-0 d-flex justify-content-center align-items-center">
-                                    <ion-icon name="chevron-forward-outline" class=""></ion-icon>
-                                </button>
-                            </div>
-                            <div
-                                class="rounded-pill sizeDrop dropdown bgUserProfile d-flex text-white d-flex justify-content-center align-items-center h-auto gap-3">
-                                <figure class="imgUser m-0 d-flex justify-content-center align-items-center h-100 p-1">
-                                    <img src="https://picsum.photos/200" alt="Image usar" class="w-100 rounded-circle">
-                                </figure>
-                                <button
-                                    class="p-0 btn text-white d-flex justify-content-center align-items-center gap-2 border-0"
-                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Lorem, ipsum dolor.
-                                    <ion-icon name="caret-down-outline"></ion-icon>
-                                    <ion-icon name="caret-up-outline" class="d-none"></ion-icon>
-                                </button>
-                                <ul class="dropdown-menu bgUserProfile">
-                                    <li><a class="dropdown-item" href="#">Account</a></li>
-                                    <li><a class="dropdown-item" href="#">Profilo</a></li>
-                                    <li><a class="dropdown-item" href="#">Sessione privata</a></li>
-                                    <li><a class="dropdown-item" href="#">Impostazioni</a></li>
-                                    <li><a class="dropdown-item border-top" href="#">Esci</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-
-                <!-- annuncio -->
-                <div class="row justify-content-center align-content-center">
-                    <div class="col-12  ">
-                        <div class=" py-4 px-3 bgHero">
-                            <div class="row">
-                                <div class="col-10 principalSong">
+        <div class="position-relative">
+            <div class="row">
+                <div class="col-2 bg-black">
+                    <aside class=" d-flex gap-3 flex-column p-3 h-100">
+                        <div class="d-flex flex-column gap-2 pb-3 border-bottom h-auto">
+                            <div class="d-flex flex-column gap-2">
+                                <div class="d-flex gap-3">
+                                    <div class="icon"><i class="bi bi-three-dots"></i></div>
                                 </div>
-                                <div class="col-2 hiddenButton">
+                                <div class="d-flex gap-3">
+                                    <div class="icon"><i class="bi bi-house-door-fill"></i></div> Home
+                                </div>
+                                <div class="d-flex gap-3">
+                                    <div class="icon"><i class="bi bi-search"></i></div> Cerca
+                                </div>
+                                <div class="d-flex gap-3">
+                                    <div class="icon"><i class="bi bi-collection"></i></div> La tua libreria
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-column gap-2">
+                                <div class="d-flex gap-3">
+                                    <div class="icon"><i class="bi bi-plus-square-fill"></i></div> Crea playlist
+                                </div>
+                                <div class="d-flex gap-3">
+                                    <div class="icon"><i class="bi bi-heart-fill"></i></div> Brani che ti piacciono
+                                </div>
+                                <div class="d-flex gap-3">
+                                    <div class="icon"><i class="bi bi-bookmark-fill"></i></div> I tuoi episodi
                                 </div>
                             </div>
                         </div>
-                    </div>
+
+                        <div class="h-50 overflow-y-auto">
+                            <ul class="list-group gap-2 list-unstyled">
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                                <li class="">Lorem, ipsum dolor.</li>
+                            </ul>
+                        </div>
+                    </aside>
                 </div>
-
-                <!-- play list -->
-                <div class="row">
-                    <div class="col-12">
-                        <main>
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-12">
-                                    <div class="row">
-                                        <section class="mt-4">
-                                            <div class="col-12">
-                                                <h3 class="fw-bold">Buonasera</h3>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="row rowPlaylist">
-
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                    <div class="row rowCard">
-                                        <section class="my-5">
-                                            <div class="col-12">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div
-                                                            class="d-flex justify-content-between align-content-center ">
-                                                            <h3 class="fw-bold">Altro di ciò che ti piace</h3>
-                                                            <button class="visualizzaTutto">VISUALIZZA TUTTO</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12 rowSongCard">
-                                                        <div
-                                                            class="containerCard d-flex justify-content-between align-items-stretch gap-5 flex-wrap ">
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                        </main>
-                    </div>
-                </div>
-
-                <!-- footer -->
-                <footer class="position-fixed bottom-0 end-0 w-100">
-                    <div class="row justify-content-between align-items-center">
+                <div class="col-8 bgSongSection">
+                    <div class="row">
+                        <!-- top -->
                         <div class="col-12">
-                            <div class="d-flex">
-                                <!-- song section -->
-                                <div class="songSection">
-                                    
+                            <section class="d-flex justify-content-between align-items-center py-3">
+                                <div class="d-flex gap-2">
+                                    <button
+                                        class="arrowButton rounded-circle border-0 d-flex justify-content-center align-items-center">
+                                        <ion-icon name="chevron-back-outline" class=""></ion-icon>
+                                    </button>
+                                    <button
+                                        class="arrowButton rounded-circle border-0 d-flex justify-content-center align-items-center">
+                                        <ion-icon name="chevron-forward-outline" class=""></ion-icon>
+                                    </button>
                                 </div>
-
-                                <!-- playbar -->
-                                <div class="playbar">
-
+                                <div
+                                    class="rounded-pill sizeDrop dropdown bgUserProfile d-flex text-white d-flex justify-content-center align-items-center h-auto gap-3">
+                                    <figure
+                                        class="imgUser m-0 d-flex justify-content-center align-items-center h-100 p-1">
+                                        <img src="https://picsum.photos/200" alt="Image usar"
+                                            class="w-100 rounded-circle">
+                                    </figure>
+                                    <button
+                                        class="p-0 btn text-white d-flex justify-content-center align-items-center gap-2 border-0"
+                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Lorem, ipsum dolor.
+                                        <ion-icon name="caret-down-outline"></ion-icon>
+                                        <ion-icon name="caret-up-outline" class="d-none"></ion-icon>
+                                    </button>
+                                    <ul class="dropdown-menu bgUserProfile">
+                                        <li><a class="dropdown-item" href="#">Account</a></li>
+                                        <li><a class="dropdown-item" href="#">Profilo</a></li>
+                                        <li><a class="dropdown-item" href="#">Sessione privata</a></li>
+                                        <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+                                        <li><a class="dropdown-item border-top" href="#">Esci</a></li>
+                                    </ul>
                                 </div>
+                            </section>
+                        </div>
+                    </div>
 
-                                <!-- set -->
-                                <div class="set">
-
+                    <!-- annuncio -->
+                    <div class="row justify-content-center align-content-center">
+                        <div class="col-12  ">
+                            <div class=" py-4 px-3 bgHero">
+                                <div class="row">
+                                    <div class="col-10 principalSong">
+                                    </div>
+                                    <div class="col-2 hiddenButton">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </footer>
 
-            </div>
-            <div class="col-2 bg-black">
-                <!--                 <div>
+                    <!-- play list -->
+                    <div class="row">
+                        <div class="col-12">
+                            <main>
+                                <div class="row justify-content-center align-items-center">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <section class="mt-4">
+                                                <div class="col-12">
+                                                    <h3 class="fw-bold">Buonasera</h3>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row rowPlaylist">
+
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <div class="row rowCard">
+                                            <section class="my-5">
+                                                <div class="col-12">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div
+                                                                class="d-flex justify-content-between align-content-center ">
+                                                                <h3 class="fw-bold">Altro di ciò che ti piace</h3>
+                                                                <button class="visualizzaTutto">VISUALIZZA
+                                                                    TUTTO</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12 rowSongCard">
+                                                            <div
+                                                                class="containerCard d-flex justify-content-between align-items-stretch gap-5 flex-wrap ">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 bg-black">
+                    <!--                 <div>
                     <button></button>
                     <button></button>
                     <button></button>
                 </div> -->
-                <div class="d-flex flex-column gap-5 ps-2">
-                    <section class="d-flex justify-content-between align-content-center w-100">
-                        <h5 class="fw-bold">Attività amici</h5>
+                    <div class="d-flex flex-column gap-5 ps-2">
+                        <section class="d-flex justify-content-between align-content-center w-100">
+                            <h5 class="fw-bold">Attività amici</h5>
 
-                        <div class="d-flex justify-content-center align-content-center">
-                            <button class="btn text-white iconInButton p-0">
-                                <ion-icon name="person-add-outline"></ion-icon>
-                            </button>
-                            <button class="btn text-white iconInButton p-0">
-                                <ion-icon name="close-outline"></ion-icon>
-                            </button>
-                        </div>
-                    </section>
-                    <section class="d-flex flex-column gap-4">
-                        <div class="d-flex gap-3">
-                            <figure class="m-0 mt-2 imgFriend">
-                                <img src="https://picsum.photos/200" alt="" class="w-100 rounded-circle">
-                            </figure>
-                            <div class="w-100">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h6 class="m-0">Lorem, ipsum.</h6>
-                                    <p class="m-0">4 ore</p>
-                                </div>
-                                <p class="m-0">Lorem ipsum dolor sit.</p>
-                                <div class="d-flex align-items-center gap-1">
-                                    <ion-icon name="disc-outline"></ion-icon>
-                                    <p class="m-0">Lorem, ipsum.</p>
+                            <div class="d-flex justify-content-center align-content-center">
+                                <button class="btn text-white iconInButton p-0">
+                                    <ion-icon name="person-add-outline"></ion-icon>
+                                </button>
+                                <button class="btn text-white iconInButton p-0">
+                                    <ion-icon name="close-outline"></ion-icon>
+                                </button>
+                            </div>
+                        </section>
+                        <section class="d-flex flex-column gap-4">
+                            <div class="d-flex gap-3">
+                                <figure class="m-0 mt-2 imgFriend">
+                                    <img src="https://picsum.photos/200" alt="" class="w-100 rounded-circle">
+                                </figure>
+                                <div class="w-100">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h6 class="m-0">Lorem, ipsum.</h6>
+                                        <p class="m-0">4 ore</p>
+                                    </div>
+                                    <p class="m-0">Lorem ipsum dolor sit.</p>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <ion-icon name="disc-outline"></ion-icon>
+                                        <p class="m-0">Lorem, ipsum.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="d-flex gap-3">
-                            <figure class="m-0 mt-2 imgFriend">
-                                <img src="https://picsum.photos/200" alt="" class="w-100 rounded-circle">
-                            </figure>
-                            <div class="w-100">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h6 class="m-0">Lorem, ipsum.</h6>
-                                    <p class="m-0">4 ore</p>
-                                </div>
-                                <p class="m-0">Lorem ipsum dolor sit.</p>
-                                <div class="d-flex align-items-center gap-1">
-                                    <ion-icon name="disc-outline"></ion-icon>
-                                    <p class="m-0">Lorem, ipsum.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex gap-3">
-                            <figure class="m-0 mt-2 imgFriend">
-                                <img src="https://picsum.photos/200" alt="" class="w-100 rounded-circle">
-                            </figure>
-                            <div class="w-100">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h6 class="m-0">Lorem, ipsum.</h6>
-                                    <p class="m-0">4 ore</p>
-                                </div>
-                                <p class="m-0">Lorem ipsum dolor sit.</p>
-                                <div class="d-flex align-items-center gap-1">
-                                    <ion-icon name="disc-outline"></ion-icon>
-                                    <p class="m-0">Lorem, ipsum.</p>
+                            <div class="d-flex gap-3">
+                                <figure class="m-0 mt-2 imgFriend">
+                                    <img src="https://picsum.photos/200" alt="" class="w-100 rounded-circle">
+                                </figure>
+                                <div class="w-100">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h6 class="m-0">Lorem, ipsum.</h6>
+                                        <p class="m-0">4 ore</p>
+                                    </div>
+                                    <p class="m-0">Lorem ipsum dolor sit.</p>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <ion-icon name="disc-outline"></ion-icon>
+                                        <p class="m-0">Lorem, ipsum.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="d-flex gap-3">
+                                <figure class="m-0 mt-2 imgFriend">
+                                    <img src="https://picsum.photos/200" alt="" class="w-100 rounded-circle">
+                                </figure>
+                                <div class="w-100">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h6 class="m-0">Lorem, ipsum.</h6>
+                                        <p class="m-0">4 ore</p>
+                                    </div>
+                                    <p class="m-0">Lorem ipsum dolor sit.</p>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <ion-icon name="disc-outline"></ion-icon>
+                                        <p class="m-0">Lorem, ipsum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
                     </section>
                 </div>
             </div>
+
+            <!-- footer -->
+            <footer class="position-fixed bottom-0 end-0 w-100">
+                <div class="row bgSongSection px-3 py-4 justify-content-center  align-items-center">
+                    <div class="col-2">
+                        <!-- song section -->
+                        <div class="songSection d-flex gap-2 justify-content-start align-items-center">
+
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <!-- playbar -->
+                        <div class="playbar">
+
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <!-- set -->
+                        <div class="set d-flex justify-content-start align-items-center">
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
 

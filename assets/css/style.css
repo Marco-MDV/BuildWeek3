@@ -5,6 +5,10 @@ root{
     --grey: #1C1C1C;
 }
 
+body{
+    height:100vh;
+}
+
 
 .icon {
     width: 30px;
@@ -172,6 +176,19 @@ h1{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.iconHeart{
+    font-size: 30px;
+}
+
+.progress{
+    width: 120px;
+    height: 5px;
+}
+
+.progress div{
+background-color: white !important;
 }
 
 /* PAGINA ARTISTA */

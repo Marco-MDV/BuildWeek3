@@ -30,7 +30,9 @@ requestData(randomName(arrayNameArtists)).then(res =>{
     principalSong(res.data),
     creatplaylist(res.data),
     cardSong(res.data),
-    footer(res.data)
+    footer(res.data),
+    play(),
+    set()
 })
 
 const principalSong = (data) =>{
@@ -213,6 +215,93 @@ const footer = (data) =>{
     const songSection = document.querySelector('.songSection')
 
     const containreInfo = document.createElement('figure')
+    containreInfo.classList.add('figurePlaylist','d-flex','justify-content-center','align-items-center','m-0')
     const imgSong = document.createElement('img')
+    imgSong.src = song.album.cover_xl
+    imgSong.classList.add('w-100','h-100')
+
+    containreInfo.appendChild(imgSong)
+
+    const info = document.createElement('div')
+    info.classList.add('info','d-flex','justify-content-center','align-items-start','m-0','flex-column','fs-6','me-4')
+    const titleSong = document.createElement('p')
+    titleSong.classList.add('text-truncate','m-0','fw-bolder','text-white')
+    titleSong.textContent = song.album.title
+    const nameArtis = document.createElement('p')
+    nameArtis.textContent = song.artist.name
+    const iconHeart = document.createElement('div')
+    iconHeart.innerHTML=`<ion-icon name="heart-outline"></ion-icon>`
+    iconHeart.classList.add('iconHeart')
+    info.append(titleSong,nameArtis)
+
+    songSection.append(containreInfo,info,iconHeart)
+}
+
+const play = () =>{
+    const playbar = document.querySelector('.playbar')
+
+    const top = document.createElement('div')
+    top.classList.add('d-flex','justify-content-center','align-items-center','gap-2')
+
+    const randomPlay = document.createElement('button')
+    randomPlay.innerHTML=`<ion-icon name="shuffle-outline"></ion-icon>`
+    const back = document.createElement('button')
+    back.innerHTML=`<ion-icon name="play-skip-back"></ion-icon>`
+    const pause = document.createElement('button')
+    pause.innerHTML=`<ion-icon name="play"></ion-icon>`
+    const forward = document.createElement('button')
+    forward.innerHTML=`<ion-icon name="play-skip-forward"></ion-icon>`
+    const rewind = document.createElement('button')
+    rewind.innerHTML=`<ion-icon name="sync"></ion-icon>`
+
+    top.append(randomPlay,back,pause,forward,rewind)
+
+    const down = document.createElement('div')
+    down.classList.add('d-flex','justify-content-center','align-items-center','gap-2')
+
+    const startTime = document.createElement('p')
+    startTime.textContent = '0:58'
+
+    const endTime = document.createElement('p')
+    endTime.textContent = '3:20'
+
+    down.append(startTime,endTime)
+
+    playbar.append(top,down)
+}
+
+const set = () =>{
+    const set = document.querySelector('.set')
+
+    const mic = document.createElement('button')
+    mic.innerHTML=`<ion-icon name="mic-outline"></ion-icon>`
+
+    const queue = document.createElement('button')
+    queue.innerHTML=`<ion-icon name="albums-outline"></ion-icon>`
+
+
+    const device = document.createElement('button')
+    device.innerHTML=`<ion-icon name="desktop-outline"></ion-icon>`
+
+    const containAudioSet = document.createElement('div')
+    containAudioSet.classList.add('containAudioSet','d-flex','justify-content-center','align-items-center','m-0')
     
+    const audioSet = document.createElement('button')
+    audioSet.innerHTML=`<ion-icon name="volume-high-outline"></ion-icon>`
+
+    const progres = document.createElement('div')
+    progres.classList.add('progress','mb-1')
+    progres.innerHTML=`
+    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+    `
+    const expand = document.createElement('button')
+    expand.innerHTML=`<ion-icon name="expand-outline"></ion-icon>`
+
+    containAudioSet.append(audioSet, progres)
+    set.append(mic, queue, device, containAudioSet, expand)
+
+    const buttons = set.querySelectorAll('button')
+    buttons.forEach(button =>{
+        button.classList.add('info', 'border-0', 'bg-transparent', 'rounded-pill')
+    })
 }
