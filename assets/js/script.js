@@ -32,7 +32,8 @@ requestData(randomName(arrayNameArtists)).then(res =>{
     cardSong(res.data),
     footer(res.data),
     play(),
-    set()
+    set(),
+    hideAside()
 })
 
 const principalSong = (data) =>{
@@ -312,5 +313,13 @@ const set = () =>{
     const buttons = set.querySelectorAll('button')
     buttons.forEach(button =>{
         button.classList.add('info', 'border-0', 'bg-transparent', 'rounded-pill')
+    })
+}
+
+const hideAside = () =>{
+    document.querySelector('#close').addEventListener('click', () =>{
+        document.querySelector('aside').classList.add('d-none'),
+    document.querySelector('#principal').classList.remove('col-8'),
+    document.querySelector('#principal').classList.add('col-10')
     })
 }
