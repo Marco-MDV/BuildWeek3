@@ -57,14 +57,22 @@ const createArtistSection = (artist) => {
         <p>Di ${artist.name}</p>
     </div>`
 
-    getPopularSong(artist.tracklist)
+    getPopularSong(artist.tracklist).then(res =>res.data.map(songs => {
+        createPopularSong(songs)
+    }))
 }
 
 const createPopularSong = (songs) => {
     const songsTab = document.querySelector("#tab-popular-songs")
 
-    songsTab.innerHTML = /*html*/`
-    <th scope="row">1</th>
-    <td>${songs.title}</td>`
+    let minutes = Math.floor(songs.duration / 60);
+
+    
+    songsTab.innerHTML += /*html*/`
+    <th scope="row" class="px-2">1</th>
+    <td class="py-2 px-3"><img src="${songs.album.cover_small}" alt=""></td>
+    <td>${songs.title}</td>
+    <td>${songs.album.title}</td>
+    <td>${minutes}</td>`
 }
 
