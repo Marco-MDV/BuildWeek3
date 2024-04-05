@@ -270,6 +270,22 @@ background-color: white !important;
     background-color: transparent;
 }
 
+.list-songs{
+    counter-reset: item;
+}
+
+.list-songs li {
+    display: block;
+}
+
+.list-songs li::before {
+    display: inline-block;
+    content: counter(item) "";
+    counter-increment: item;
+    width: 2em;
+    margin-left: -2em;
+}
+
 
 
 .visualizzaTutto{

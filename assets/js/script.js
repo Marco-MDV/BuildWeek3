@@ -73,7 +73,7 @@ const principalSong = (data) =>{
     const artist = document.createElement('p')
     const artistLink = document.createElement('a')
     artistLink.classList.add('link-unstyled','text-decoration-none','text-white')
-    artistLink.href='./artist.html'
+    artistLink.href='./artist.html?id=' + song.artist.id
     artistLink.textContent = song.artist.name
     artist.append(artistLink)
 
@@ -194,7 +194,7 @@ const createCard = (song) =>{
     title.classList.add('title','fw-bold')
     artistLink.textContent  = 'Playlist title'
     artistLink.classList.add('link-unstyled','text-decoration-none','text-white')
-    artistLink.href='./artist.html'
+    artistLink.href='./artist.html?id=' + song.artist.id
     title.append(artistLink)
 
     const description = document.createElement('p')

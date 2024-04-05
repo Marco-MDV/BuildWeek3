@@ -1,6 +1,10 @@
 const searchParams = new URLSearchParams(window.location.search)
-const id = "246791";
+const id = searchParams.get("id");
+
+// console.log(window.location.href.split("/").reverse()[0]);
 const URL_ENDPOINT = 'https://striveschool-api.herokuapp.com/api/deezer/artist/' + id
+
+// test per artista senza canzoni '75621062'
 
 const getArtist = async () => {
     try {
@@ -57,22 +61,34 @@ const createArtistSection = (artist) => {
         <p>Di ${artist.name}</p>
     </div>`
 
-    getPopularSong(artist.tracklist).then(res =>res.data.map(songs => {
-        createPopularSong(songs)
-    }))
+    getPopularSong(artist.tracklist).then(res =>{
+        if (res.data.length === 0) {
+            noPopularSong()
+        } else {
+            res.data.slice(0,5).map(songs => {
+                createPopularSong(songs)
+            })
+        }
+    })
 }
 
 const createPopularSong = (songs) => {
-    const songsTab = document.querySelector("#tab-popular-songs")
+    const songsTab = document.querySelector("#list-popular-song")
 
-    let minutes = Math.floor(songs.duration / 60);
+    // let minutes = Math.floor(songs.duration / 60);
 
-    
     songsTab.innerHTML += /*html*/`
-    <th scope="row" class="px-2">1</th>
-    <td class="py-2 px-3"><img src="${songs.album.cover_small}" alt=""></td>
-    <td>${songs.title}</td>
-    <td>${songs.album.title}</td>
-    <td>${minutes}</td>`
+        <li class="px-2 py-2">
+            <td class="py-2 px-3"><img src="${songs.album.cover_small}" alt=""></td>
+            <td class="px-2">${songs.title}</td>
+            <td class="px-2">${songs.album.title}</td>            
+        </li>`
+}
+
+const noPopularSong = () => {
+    const noSongContainer = document.querySelector("#popular-song-container") 
+
+    noSongContainer.innerHTML = /*html*/`
+    <p>Non ci sono risultati per questo artista</p>`
 }
 
