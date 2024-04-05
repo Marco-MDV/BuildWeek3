@@ -263,7 +263,6 @@ background-color: white !important;
 .avatar-artist{
     width: 75px;
     height: 75px;
-    background-color: red;
 }
 
 .popular-song-table{
@@ -284,6 +283,15 @@ background-color: white !important;
     counter-increment: item;
     width: 2em;
     margin-left: -2em;
+}
+
+.iconHeartOneArtist{
+    width: 20px;
+    height: 20px;
+    background: #1ED760;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 

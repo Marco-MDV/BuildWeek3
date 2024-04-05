@@ -53,12 +53,13 @@ const createArtistSection = (artist) => {
 
     const tracklistLike = document.querySelector("#tracklist-like")
     tracklistLike.innerHTML = /*html*/ `
-    <div class="avatar-artist rounded-circle">
-        <img class="w-100 h-100 object-fit-cover" id="artist-image" src="${artist.picture_xl}" alt="">
+    <div class="avatar-artist position-relative">
+        <img class=" rounded-circle w-100 h-100 object-fit-cover" id="artist-image" src="${artist.picture_xl}" alt="">
+        <div class="position-absolute bottom-0 end-0 iconHeartOneArtist rounded-circle"><ion-icon name="heart"></ion-icon></div>
     </div>
-    <div class="d-flex flex-column px-2 ">
-        <p>Hai messo Mi piace a 11 brani</p>
-        <p>Di ${artist.name}</p>
+    <div class="d-flex flex-column px-2 gap-2">
+        <p class="m-0">Hai messo Mi piace a 11 brani</p>
+        <p class="m-0">Di <b>${artist.name}</b></p>
     </div>`
 
     getPopularSong(artist.tracklist).then(res =>{
@@ -66,7 +67,17 @@ const createArtistSection = (artist) => {
             noPopularSong()
         } else {
             res.data.slice(0,5).map(songs => {
+                createPopularSong(songs)                
+            })
+            const loadMoreBtn = document.querySelector("#loadMoreBtn");
+            loadMoreBtn.addEventListener("click", ()=>{
+                let minItem = 5;
+                let maxItem = 10;
+                res.data.slice(minItem,maxItem).map(songs => {
                 createPopularSong(songs)
+                minItem += 5
+                maxItem += 5
+               }) 
             })
         }
     })
