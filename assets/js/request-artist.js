@@ -5,6 +5,8 @@ const id = searchParams.get("id");
 const URL_ENDPOINT = 'https://striveschool-api.herokuapp.com/api/deezer/artist/' + id
 
 // test per artista senza canzoni '75621062'
+let minItem = 5;
+let maxItem = 10;
 
 const getArtist = async () => {
     try {
@@ -71,12 +73,11 @@ const createArtistSection = (artist) => {
             })
             const loadMoreBtn = document.querySelector("#loadMoreBtn");
             loadMoreBtn.addEventListener("click", ()=>{
-                let minItem = 5;
-                let maxItem = 10;
+                minItem = minItem + 5
+                maxItem = maxItem + 5
                 res.data.slice(minItem,maxItem).map(songs => {
                 createPopularSong(songs)
-                minItem += 5
-                maxItem += 5
+                
                }) 
             })
         }
