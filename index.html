@@ -15,7 +15,7 @@
     <div class="container-fluid">
         <div class="position-relative">
             <div class="row">
-                <div class="col-2 bg-black">
+                <div class="d-none d-md-block  col-md-4 col-xl-2 bg-black">
                     <nav class=" d-flex gap-3 flex-column p-3 h-100">
                         <div class="d-flex flex-column gap-2 pb-3 border-bottom h-auto">
                             <div class="d-flex flex-column gap-2">
@@ -73,11 +73,11 @@
                         </div>
                     </nav>
                 </div>
-                <div class="col-8 bgSongSection" id="principal">
+                <div class="col-12 col-md-8 bgSongSection" id="principal">
                     <div class="row">
                         <!-- top -->
                         <div class="col-12">
-                            <section class="d-flex justify-content-between align-items-center py-3">
+                            <section class="d-none d-md-flex justify-content-between align-items-center py-3">
                                 <div class="d-flex gap-2">
                                     <button
                                         class="arrowButton rounded-circle border-0 d-flex justify-content-center align-items-center">
@@ -111,11 +111,19 @@
                                     </ul>
                                 </div>
                             </section>
+                            <section class="d-flex d-md-none justify-content-between align-items-center py-3">
+                                <h2 class="fw-bold">Buonasera</h2>
+                                    <div class="d-flex flex-row gap-2 buttonNavSmartPhone justify-content-center align-content-center">
+                                        <button class="d-flex justify-content-center align-items-center"><ion-icon name="notifications-outline" class="w-100 h-100"></ion-icon></button>
+                                        <button class="d-flex justify-content-center align-items-center"><ion-icon name="time-outline" class="w-100 h-100"></ion-icon></button>
+                                        <button class="d-flex justify-content-center align-items-center"><ion-icon name="cog-outline" class="w-100 h-100"></ion-icon></button>
+                                    </div>
+                            </section>
                         </div>
                     </div>
 
                     <!-- annuncio -->
-                    <div class="row justify-content-center align-content-center hero">
+                    <div class="row justify-content-center align-content-center hero d-none d-md-flex">
                         <div class="col-12  ">
                             <div class=" py-4 px-3 bgHero">
                                 <div class="row">
@@ -137,7 +145,11 @@
                                         <div class="row">
                                             <section class="mt-4">
                                                 <div class="col-12">
-                                                    <h3 class="fw-bold pb-2">Buonasera</h3>
+                                                    <h3 class="fw-bold pb-2 d-none d-md-block">Buonasera</h3>
+                                                    <div class="buttonPlayList pb-4 px-3 d-flex justify-content-start align-content-center gap-4">
+                                                        <button>Music</button>
+                                                        <button>Podcast e show</button>
+                                                    </div>
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="row rowPlaylist">
@@ -149,7 +161,7 @@
                                         <div class="row rowCard">
                                             <section class="my-3">
                                                 <div class="col-12">
-                                                    <div class="row">
+                                                    <div class="row d-none d-md-flex">
                                                         <div class="col-12">
                                                             <div class="d-flex justify-content-between align-content-center pb-2">
                                                                 <h3 class="fw-bold">Altro di ciò che ti piace</h3>
@@ -158,12 +170,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-12 rowSongCard">
-                                                            <div
-                                                                class="containerCard d-flex justify-content-between align-items-stretch gap-5 flex-wrap ">
+                                                    <div class="row"><!--  -->
+                                                        <div class="col-12 containerCard d-flex justify-content-between align-items-stretch flex-wrap gap-1">
 
-                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -175,7 +184,7 @@
                         </div>
                     </div>
                 </div>
-                <aside class="col-2 bg-black">
+                <aside class="d-none d-lg-block col-xl-2 bg-black">
                     <div class="d-flex flex-column gap-5 ps-2">
                         <section class="d-flex justify-content-between align-content-center w-100">
                             <h5 class="fw-bold">Attività amici</h5>
@@ -246,23 +255,37 @@
             <!-- footer -->
             <footer class="position-fixed bottom-0 end-0 w-100">
                 <div class="row bgSongSection px-3 py-4 justify-content-center  align-items-center">
-                    <div class="col-2">
+                    <div class="col-2 d-none d-md-flex">
                         <!-- song section -->
                         <div class="songSection d-flex gap-2 justify-content-start align-items-center">
 
                         </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-8 d-none d-md-block">
                         <!-- playbar -->
                         <div class="playbar">
 
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-2 d-none d-md-flex">
                         <!-- set -->
                         <div class="set d-flex justify-content-start align-items-center">
 
                         </div>
+                    </div>
+                    <div class="col-12 d-block d-md-none">
+
+                            <div class="d-flex justify-content-end align-content-center w-100 gap-2">
+                                <h4 class="text-truncate titleFooterButtonsSmartphone m-0">
+
+                                </h4>
+                                <div class="footerButtonsSmartphone d-flex justify-content-center align-content-center">
+                                    <button><ion-icon name="desktop-outline"></ion-icon></button>
+                                    <button><ion-icon name="heart-outline"></ion-icon></button>
+                                    <button><ion-icon name="play-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        
                     </div>
                 </div>
             </footer>

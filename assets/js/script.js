@@ -120,7 +120,7 @@ const creatplaylist = (data) =>{
     rowPlaylist.classList.add('rowPlaylist','d-flex','justify-content-center','align-items-stretch')
     for (let index = 0; index < numPlaylist; index++) {
         const colPlayList = document.createElement('div')
-        colPlayList.classList.add('colPlayList','col-4','d-flex','justify-content-center','align-items-center')
+        colPlayList.classList.add('colPlayList','col-6','col-md-4','d-flex','justify-content-center','align-items-center')
 
         let song = randomName(data)
         console.log(song);
@@ -151,7 +151,7 @@ const creatplaylist = (data) =>{
         containerSectionTwo.classList.add('containerSectionTwo','d-flex','justify-content-center','align-items-center','me-3')
         
         const playButton = document.createElement('button')
-        playButton.classList.add('rounded-pill', 'border-0','play2','d-flex','justify-content-center','align-items-center','p-1','playButtonPlayList')
+        playButton.classList.add('rounded-pill', 'border-0','play2','d-none','d-md-flex','justify-content-center','align-items-center','p-1','playButtonPlayList')
         playButton.innerHTML=`<ion-icon name="play-sharp"></ion-icon>`
 
         rowPlaylist.append(colPlayList)
@@ -175,8 +175,9 @@ const cardSong = (data) =>{
 const createCard = (song) =>{
     const containerCard = document.querySelector('.containerCard')
     const card = document.createElement('div')
-    card.classList.add('card','d-flex','justify-content-start','align-items-start','gap-2','rounded','p-2','text-white')
+    card.classList.add('card','d-flex','justify-content-start','align-items-start','gap-2','rounded','pt-3','px-3','p-md-2','text-white')
     containerCard.appendChild(card)
+   
 
     const figure = document.createElement('figure')
     figure.classList.add('m-0','figureCard','position-relative')
@@ -201,7 +202,36 @@ const createCard = (song) =>{
     description.classList.add('description','truncate')
     description.textContent = 'Lorem, ipsum dolor.'
 
-    card.append(figure,title,description)
+    const containerSectionOne = document.createElement('div')
+    containerSectionOne.classList.add('containerSectionOne','d-flex','d-md-block','gap-3')
+
+    const containerText = document.createElement('div')
+    containerText.append(title,description)
+
+    containerSectionOne.append(figure,containerText)
+
+    const containerSectionTwo = document.createElement('div')
+    containerSectionTwo.classList.add('containerSectionTwo','d-flex','d-md-none','justify-content-between','align-items-center','w-100','pt-2')
+
+    const sectionLeft = document.createElement('div')
+    const heart = document.createElement('button')
+    heart.innerHTML=`<ion-icon name="heart-outline"></ion-icon>`
+    const moreInfo = document.createElement('button')
+    moreInfo.innerHTML=`<ion-icon name="ellipsis-horizontal-outline"></ion-icon>`
+    sectionLeft.append(heart, moreInfo)
+
+    const sectionRight = document.createElement('div')
+    sectionRight.classList.add('sectionRight','d-flex','justify-content-center','align-items-center','gap-2')
+    const songs = document.createElement('p')
+    songs.classList.add('m-0')
+    songs.textContent='Lorem'
+    const play = document.createElement('button')
+    play.classList.add('d-flex','justify-content-center','align-items-center','p-2')
+    play.innerHTML=`<ion-icon name="play-outline"></ion-icon>`   
+    sectionRight.append(songs,play)
+    
+    containerSectionTwo.append(sectionLeft, sectionRight)
+    card.append(containerSectionOne,containerSectionTwo)
 }
 
 const hiddenCards = (hiddeCards) =>{  
@@ -253,6 +283,10 @@ const footer = (data) =>{
     info.append(titleSong,nameArtis)
 
     songSection.append(containreInfo,info,iconHeart)
+
+
+    const footerSmartPhone = document.querySelector('.titleFooterButtonsSmartphone')
+    footerSmartPhone.textContent = song.album.title
 }
 
 const play = () =>{

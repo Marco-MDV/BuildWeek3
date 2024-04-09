@@ -9,6 +9,21 @@ body{
     height:100vh;
 }
 
+.buttonNavSmartPhone button{
+    border: 0px;
+    background-color: transparent;
+    color: white;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+
+.buttonPlayList button{
+    border: 0px;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+}
 
 .icon {
     width: 30px;
@@ -187,7 +202,6 @@ h1{
 .card{
     background-color: #171717;
     width: 200px;
-
 }
 .card:hover{
     && .playButtonPlayList{
@@ -238,6 +252,49 @@ background-color: white !important;
 
 .songSection div ion-icon:hover{
     color: red;
+}
+
+.footerButtonsSmartphone button{
+    color: #636363;
+    border: 0;
+    background-color: transparent;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerButtonsSmartphone button:nth-child(2){
+
+    color: white;
+    
+}
+
+.footerButtonsSmartphone button:last-child{
+
+    color: white;
+    
+}
+
+.containerSectionTwo div button{
+    border: 0px;
+    background-color: transparent;
+    font-size: 30px;
+}
+
+.containerSectionTwo div button:first-child{
+    color: #1ED760;
+}
+
+.containerSectionTwo div button:nth-child(2){
+    color:#9B9B9B;
+    background-color: transparent;
+}
+
+.sectionRight button:last-child{
+    background-color: #1C1C1C !important;
+    border-radius: 40px;
+    color: white;
 }
 
 /* PAGINA ARTISTA */
@@ -301,4 +358,21 @@ background-color: white !important;
     color: #A7A7A7;
     background-color: transparent;
     font-weight: bold;
+}
+
+
+@media screen and (max-width: 600px) {
+    .figurePlaylist{
+        min-width: 80px;
+        height: 80px;
+        object-fit: cover;
+    }
+    .card{
+        background-color: #171717;
+        width: 100%;
+    }
+    .figureCard{
+        height: 198px;
+        width: 200px;
+    }
 }
