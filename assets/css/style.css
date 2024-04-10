@@ -1,0 +1,378 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+root{
+    --green: #1ED760;
+    --grey: #1C1C1C;
+}
+
+body{
+    height:100vh;
+}
+
+.buttonNavSmartPhone button{
+    border: 0px;
+    background-color: transparent;
+    color: white;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+
+.buttonPlayList button{
+    border: 0px;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon i {
+    font-size: 25px;
+}
+
+.iconHeartOne{
+    width: 30px;
+    height: 30px;
+    background: rgb(63,33,168);
+    background: linear-gradient(170deg, rgba(63,33,168,1) 35%, rgba(128,151,153,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconHeart ion-icon{
+    width: 20px !important;
+    height: 20px !important;
+}
+
+
+.iconBookmark{
+    width: 30px;
+    height: 30px;
+    background-color: #004537;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgUser {
+    width: 30px;
+    height: 30px;
+}
+
+.arrowButton {
+    width: 30px;
+    height: 30px;
+    background-color: #131313;
+    color: white;
+}
+
+.sizeDrop {
+    height: 300px;
+}
+
+.bgUserProfile {
+    background-color: #0A0A0A;
+}
+
+.bgUserProfile li a {
+    color: white;
+}
+
+.iconInButton {
+    width: 30px;
+    height: 30px;
+}
+
+.iconInButton ion-icon {
+    font-size: 20px;
+}
+
+.bgSongSection{
+    background-color: #212121;
+}
+
+
+h1{
+    font-size: 50px;
+}
+
+.imgFriend {
+    width: 40px;
+    height: 40px;
+}
+
+.buttonHidden{
+    background-color: #222222;
+    color: #636363;
+    font-weight: bold;
+}
+
+.containerCard {
+    margin-bottom: 142px;
+}
+
+/* chidere perché non si l'img non si adata al figure */
+
+.principalSongFigure{
+    height: 256px;
+    width: 256px !important;
+}
+
+.principalSongFigure img{
+    height: 100%;
+    width: 100% !important;
+    object-fit: cover;
+}
+
+.info{
+    color: #9B9B9B;
+    font-size: 25px;
+}
+
+.play{
+    background-color: #1ED760;
+    font-weight: bold;
+}
+
+.salva{
+    font-weight: bold;
+}
+
+.containerPlaylist{
+    background-color: #2D2D2D;
+    min-height: 30px;
+}
+
+.figurePlaylist{
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: cover;
+}
+
+.play2{
+    background-color: #1ED760;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.containerPlaylist:hover {
+    && .playButtonPlayList{
+        animation: playButton 0.6s forwards;
+    }
+    background-color: #505050;
+}
+
+.playButtonPlayList{
+    opacity: 0;
+}
+
+@keyframes playButton {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.visualizzaTutto{
+    border: 0px;
+    color: #A7A7A7;
+    background-color: transparent;
+    font-weight: bold;
+}
+.buttonHidden{
+    font-size: 12px;
+}
+
+
+.bgHero{
+    background: rgb(0,0,0);
+    background: linear-gradient(10deg, rgba(0,0,0,1) 36%, rgba(116,111,111,1) 100%);
+}
+
+.card{
+    background-color: #171717;
+    width: 200px;
+}
+.card:hover{
+    && .playButtonPlayList{
+        animation: playButton 0.6s forwards;
+    }
+    background-color: #191919;
+}
+
+.figureCard{
+    height: 198px;
+    width: 100%;
+}
+
+.figureCard img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.iconHeart{
+    font-size: 30px;
+}
+
+.progress{
+    width: 120px;
+    height: 5px;
+}
+
+.progress div{
+background-color: white !important;
+}
+
+.playbar .top button:first-child{
+    color:#1ED760;
+} 
+
+.playbar .top button:last-child{
+    color:#1ED760;
+} 
+.playbar .top button:nth-child(3){
+    color:white;
+    font-size: 35px;
+} 
+
+.playProgressBar{
+    width: 75%;
+}
+
+.songSection div ion-icon:hover{
+    color: red;
+}
+
+.footerButtonsSmartphone button{
+    color: #636363;
+    border: 0;
+    background-color: transparent;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerButtonsSmartphone button:nth-child(2){
+
+    color: white;
+    
+}
+
+.footerButtonsSmartphone button:last-child{
+
+    color: white;
+    
+}
+
+.containerSectionTwo div button{
+    border: 0px;
+    background-color: transparent;
+    font-size: 30px;
+}
+
+.containerSectionTwo div button:first-child{
+    color: #1ED760;
+}
+
+.containerSectionTwo div button:nth-child(2){
+    color:#9B9B9B;
+    background-color: transparent;
+}
+
+.sectionRight button:last-child{
+    background-color: #1C1C1C !important;
+    border-radius: 40px;
+    color: white;
+}
+
+/* PAGINA ARTISTA */
+.overlay-artist-bg{
+    width: 100%;
+    height: 300px;
+    background-color: #0A0A0A;
+    opacity: 0.7;
+    position: absolute;
+}
+
+.artist-image{
+    width: 100%;
+    height: 300px;
+}
+
+.playArtist{
+    background-color: #1ED760;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.avatar-artist{
+    width: 75px;
+    height: 75px;
+}
+
+.popular-song-table{
+    background-color: transparent;
+}
+
+.list-songs{
+    counter-reset: item;
+}
+
+.list-songs li {
+    display: block;
+}
+
+.list-songs li::before {
+    display: inline-block;
+    content: counter(item) "";
+    counter-increment: item;
+    width: 2em;
+    margin-left: -2em;
+}
+
+.iconHeartOneArtist{
+    width: 20px;
+    height: 20px;
+    background: #1ED760;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.visualizzaTutto{
+    border: 0px;
+    color: #A7A7A7;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 600px) {
+    .figurePlaylist{
+        min-width: 80px;
+        height: 80px;
+        object-fit: cover;
+    }
+    .card{
+        background-color: #171717;
+        width: 100%;
+    }
+    .figureCard{
+        height: 198px;
+        width: 200px;
+    }
+}
